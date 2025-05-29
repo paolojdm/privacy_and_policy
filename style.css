@@ -1,0 +1,902 @@
+/*-- -------------------------- -->
+<---           hero             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+body {
+  background-color: rgb(5, 5, 5);
+  color: white;
+}
+h2.cs-title {
+  color: #ffffff;
+}
+p.cs-text {
+  color: blueviolet;
+}
+@media only screen and (min-width: 0rem) {
+  #hero-358 {
+    /* Centers button */
+    text-align: center;
+    /* 150px - 350px */
+    padding: clamp(30px, 25.95vw, 1px) 1rem;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 1;
+    /* prevents overflow from the lines extending past the screen width */
+    overflow: hidden;
+  }
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1em);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes floatAnimation2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1em);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  #hero-358 .cs-background {
+    /* Background Image */
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #hero-358 .cs-background:before {
+    /* White Color Overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.85;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+  }
+  #hero-358 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes image act like a background-image */
+    object-fit: cover;
+    /* places the top of the image at the top of the parent */
+    object-position: top;
+  }
+  #hero-358 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 7vw, 4rem);
+  }
+  #hero-358 .cs-flex-group {
+    max-width: 39.125rem;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  #hero-358 .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #hero-358 .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(3rem, 6.4vw, 4.8125rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 1rem;
+    color: #fff;
+    position: relative;
+  }
+  #hero-358 .cs-accent {
+    color: var(--primaryLight);
+  }
+  #hero-358 .cs-text {
+    font-size: 1.25rem;
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    /* changes to 442px at desktop */
+    max-width: 43.75rem;
+    /* 32px - 40px */
+    margin: 0 auto clamp(2rem, 4vw, 2.5rem);
+    /* 24px - 40px */
+    margin-bottom: clamp(1.75rem, 4vw, 2.5rem);
+    color: blueviolet;
+  }
+  #hero-358 .cs-button-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  #hero-358 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    width: 11.25rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    /* clips corners of the before element */
+    overflow: hidden;
+    margin: 0;
+    color: #ffffff;
+    padding: 0;
+    background-color: var(--secondary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-family: Roboto;
+    cursor: pointer;
+  }
+  #hero-358 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #224189;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #hero-358 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-358 .cs-button-transparent {
+    text-decoration: none;
+    width: auto;
+    /* 46px - 56px */
+    height: clamp(2.875rem, 5.5vw, 3.5rem);
+    margin: 0;
+    padding: 0;
+    color: var(--primaryLight);
+    background-color: transparent;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-358 .cs-button-transparent:before {
+    /* white hover box */
+    content: "";
+    /* 46px - 56px */
+    width: clamp(2.875em, 5.5vw, 3.5em);
+    background: #fff;
+    border-radius: 2.5rem;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: -6px;
+    bottom: -6px;
+    left: 6px;
+    z-index: -1;
+    transition: width 0.3s, box-shadow 0.3s;
+  }
+  #hero-358 .cs-button-transparent:hover:before {
+    width: 107%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  #hero-358 .cs-image-group {
+    font-size: min(1.6vw, 0.7em);
+    /* using ems so we can scale this container with a font size */
+    width: 51.9375em;
+    height: 42.125em;
+    position: relative;
+  }
+  #hero-358 .cs-splash {
+    position: absolute;
+    width: 49.4375em;
+    height: 38.5em;
+    top: 4.25em;
+    right: -2.5em;
+  }
+  #hero-358 .cs-person {
+    width: auto;
+    height: 100%;
+    position: relative;
+  }
+  #hero-358 .cs-person img {
+    width: 50%;
+    height: 110%;
+    margin-top: -20px;
+
+  }
+  #hero-358 .cs-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.5em;
+    height: 7.5em;
+    border-radius: 20%;
+    background-color: var(--primaryLight);
+    position: absolute;
+    left: 8.125em;
+    bottom: 3.8125em;
+    z-index: 100;
+    animation-name: floatAnimation2;
+    animation-duration: 4s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #hero-358 .cs-icon {
+    width: 10.25em;
+    height: auto;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+  }
+}
+/* Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #hero-358 {
+    padding-bottom: 10rem;
+    padding: clamp(9rem, 25.95vw, 10.875rem) 1rem;
+  }
+  #hero-358 .cs-container {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  #hero-358 .cs-flex-group {
+    justify-content: flex-start;
+    margin: 0;
+  }
+  #hero-358 .cs-topper,
+  #hero-358 .cs-title,
+  #hero-358 .cs-text {
+    text-align: left;
+    margin-left: 0;
+  }
+  #hero-358 .cs-text {
+    max-width: 27.625rem;
+  }
+  #hero-358 .cs-button-group {
+    justify-content: flex-start;
+  }
+  #hero-358 .cs-image-group {
+    font-size: min(1.4vw, 1em);
+    position: absolute;
+    bottom: -9.375em;
+    right: -13.5625em;
+  }
+}
+
+/*-- -------------------------- -->
+<---          Competences       -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-468 {
+    padding: var(--sectionPadding);
+    position: relative;
+    background-color: #439eff;
+  }
+  #services-468 .cs-container {
+    width: 100%;
+    /* changes to 1440px at tablet */
+    max-width: 34.375em;
+    margin: auto;
+  }
+  .cs-title-white {
+    color: #fff;
+    /* 39px - 61px */
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    font-family: Roboto;
+    font-size: var(--headerFontSize);
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+  }
+  #services-468 .cs-card-group {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;              
+    list-style: none; 
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* 8px - 20px */
+    column-gap: clamp(0.5rem, 1.5vw, 1.25rem);
+    row-gap: 1.25rem;
+  }
+  #services-468 .cs-item {
+    width: 48.5%;
+    list-style: none;
+    /* 24px - 48px top and bottom */
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    border: 1px solid #b4b2c7;
+    box-shadow: 0px 24px 54px rgba(87, 107, 147, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 12px - 24px */
+    gap: 1rem;
+    position: relative;
+    transition: border-color 0.3s;
+  }
+  #services-468 .cs-item:before {
+    /* green border on hover */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    /* prevents mouse from interacting with it */
+    pointer-events: none;
+    border: 4px solid var(--primaryLight);
+    box-sizing: border-box;
+    /* prevents border from affecting height and width */
+    border-radius: 0.625rem;
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s;
+  }
+  #services-468 .cs-item:hover {
+    border-color: var(--primaryLight);
+  }
+  #services-468 .cs-item:hover:before {
+    opacity: 1;
+  }
+  #services-468 .cs-item:nth-of-type(5) {
+    width: 100%;
+  }
+  #services-468 .cs-icon {
+    /* 44px - 90px */
+    width: clamp(2.75rem, 6vw, 5.625rem);
+    height: auto;
+  }
+  #services-468 .cs-h3 {
+    /* 16px - 25px */
+    font-size: clamp(1rem, 2vw, 1.5625rem);
+    line-height: 1.2em;
+    text-align: center;
+    margin: 0;
+    color: var(--headerColor);
+    font-family: Roboto;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-468 .cs-container {
+    max-width: 90rem;
+  }
+  #services-468 .cs-card-group {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  #services-468 .cs-item {
+    width: 100%;
+  }
+}
+
+/*-- -------------------------- -->
+<---          Projects          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #projects-2196 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #projects-2196 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(1rem, 6vw, 2rem);
+  }
+  #projects-2196 .cs-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects-2196 .cs-card-group {
+    width: 100%;
+    max-width: 25rem;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    row-gap: 2rem;
+  }
+  #projects-2196 .cs-item {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+    gap: 1rem;
+    position: relative;
+  }
+
+  #projects-2196 .cs-item:hover .cs-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #projects-2196 .cs-item:hover .cs-picture:after {
+    opacity: 1;
+  }
+  #projects-2196 .cs-item:hover .cs-picture img {
+    transform: scale(1.04);
+  }
+  #projects-2196 .cs-image-group {
+    width: 100%;
+    /* 280px - 320px */
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  #projects-2196 .cs-picture {
+    width: 100%;
+    height: clamp(12.5rem, 25vw, 16.875rem);
+    /* clips img tag from overflowing it on hover */
+    display: block;
+    position: relative;
+    border-radius: 1rem;
+    margin: 0 0 0rem;
+    overflow: hidden;
+    transition: transform 0.65s;
+  }
+  #projects-2196 .cs-picture:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s;
+  }
+  #projects-2196 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    position: absolute;
+    z-index: -1;
+    transition: transform 0.6s;
+    top: 0;
+    left: 0;
+    padding: 0 1.25rem;
+  }
+
+  #projects-2196 .cs-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #projects-2196 .cs-name {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0;
+    color: white;
+    display: block;
+    font-family: Roboto;
+    margin: 0 0 1rem;
+  }
+  .cs-project-description {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    font-weight: 300;
+    line-height: 1.2em;
+    margin: 0;
+    color: white;
+    display: block;
+    font-family: Roboto;
+  }
+  #projects-2196 .cs-button-group {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  #projects-2196 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(1.875rem, 5.5vw, 2.5rem);
+    width: 6.25rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    /* clips corners of the before element */
+    overflow: hidden;
+    margin: 0;
+    color: #ffffff;
+    padding: 0;
+    background-color: var(--secondary);
+    display: inline-flex;
+    position: relative;
+    z-index: 1;
+    font-family: Roboto;
+    justify-content: center;
+    align-items: center;
+  }
+  #projects-2196 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #224189;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #projects-2196 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #projects-2196 .cs-card-group {
+    max-width: none;
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 2vw, 1.5rem);
+  }
+  #projects-2196 .cs-item {
+    grid-column: span 3;
+  }
+}
+
+/*-- -------------------------- -->
+<---      Call To Action        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cta-262 {
+    padding: clamp(1.75rem, 7.82vw, 2.25rem) 1rem;
+  }
+  #cta-262 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    /* 32px - 88px top & bottom */
+    /* 24px - 88px left & right */
+    padding: clamp(2em, 6.3vw, 5.5em) clamp(1.5em, 5.7vw, 5.5em);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    /* clips the corners for the border radius to show */
+    overflow: hidden;
+    z-index: 1;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+  }
+  #cta-262 .cs-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+    background-color: #439eff;
+  }
+  #cta-262 .cs-background:before {
+    /* black overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #cta-262 .cs-background:after {
+    /* brown overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--primaryLight);
+    opacity: 0.2;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  #cta-262 .cs-title {
+    color: var(--bodyTextColorWhite);
+    text-align: center;
+  }
+  #cta-262 .cs-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 12px - 20px */
+    gap: clamp(0.75rem, 1.6vw, 1.25rem);
+    font-family: Roboto;
+  }
+  #cta-262 .cs-header {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.4vw, 1.5625rem);
+    font-weight: bold;
+    color: #fff;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cta-262 .cs-container {
+    justify-content: center;
+  }
+  #cta-262 .cs-content {
+    align-items: center;
+    text-align: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+}
+
+/*-- -------------------------- -->
+<---         Contacts           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #contact-strip-719 {
+    padding: var(--sectionPadding);
+    background-color: #439eff;
+    position: relative;
+    z-index: 1;
+  }
+  #contact-strip-719 .cs-stat-group {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 37.5rem;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    background-color: #439eff;
+  }
+  #contact-strip-719 .cs-item {
+    list-style: none;
+    width: 18.125rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Roboto;
+  }
+  #contact-strip-719 .cs-item:hover .cs-picture {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transform: scale(1.1);
+  }
+  #contact-strip-719 .cs-picture {
+    width: 5rem;
+    height: 5rem;
+    /* 12px - 20px */
+    margin-right: clamp(0.75rem, 3vw, 1.25rem);
+    border: 1px solid #f6e5db;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s, transform 0.6s;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #contact-strip-719 .cs-flex-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #contact-strip-719 .cs-icon {
+    width: 2.5rem;
+    height: auto;
+  }
+  #contact-strip-719 .cs-header {
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 0.75rem;
+    color: var(--bodyTextColorWhite);
+    display: block;
+  }
+  #contact-strip-719 .cs-link,
+  #contact-strip-719 .cs-address {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-decoration: none;
+    color: var(--bodyTextColorWhite);
+    display: block;
+  }
+  #contact-strip-719 .cs-link:hover {
+    text-decoration: underline;
+  }
+}
+/* Tablet - 650px */
+@media only screen and (min-width: 40.625rem) {
+  #contact-strip-719 .cs-stat-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.25rem;
+    row-gap: 2rem;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #contact-strip-719 .cs-stat-group {
+    max-width: 80rem;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+}
+
+/*-- -------------------------- -->
+<---           Footer           -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+  #cs-footer-108 {
+    padding: clamp(1.5rem, 7.9vw, 1.25rem) 1rem;
+    background-color: #224189;
+  }
+  #cs-footer-108 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+  }
+
+  #cs-footer-108 .cs-copyright {
+    font-size: clamp(0.875rem, 1.6vw, 0.9rem);
+    text-align: center;
+    color: #ffffff;
+    display: block;
+    font-family: Roboto;
+    font-weight: 300;
+  }
+  #cs-footer-108 .cs-copyright a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
+/*-- -------------------------- -->
+<---    Terms & Conditions      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #terms-conditions {
+    padding: var(--sectionPadding);
+    display: flex;
+    flex-direction: column;
+  }
+  #terms-conditions h1 {
+    justify-content: center;
+    font-size: var(--headerFontSize);
+    font-weight: 800;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: white;
+    position: relative;
+    font-family: Roboto;
+  }
+  #terms-conditions p {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    color: var(--bodyTextColor);
+    font-family: Roboto;
+    padding: clamp(1.4rem, 7.82vw, 2.25rem) 1rem;
+  }
+  #terms-conditions ul {
+    padding: clamp(0rem, 7.82vw, 0rem) 1rem;
+  }
+  #terms-conditions li {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    margin: 0;
+    color: var(--bodyTextColor);
+    font-family: Roboto;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #terms-conditions p {
+    padding: clamp(1.75rem, 7.82vw, 2.25rem) 6rem;
+  }
+  #terms-conditions ul {
+    padding: clamp(0rem, 7.82vw, 0rem) 6rem;
+  }
+}
